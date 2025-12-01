@@ -1,23 +1,24 @@
-import Image from "next/image";
+import React, { Component } from 'react';
+import profileImage from "./assets/pfp.jpeg";
 
-export default function Home() {
+export default function Home(){
     return (
         <>
         {/**name brief intro interests, pic */}
-        <div className="flex h-screen w-screen justify-center items-center 
-            bg-[#d8e4eb]">
-            <div className="flex flex-row h-[600px] w-[350px] 
-                        md:h-[350px] md:w-[600px] 
+        <div className='flex h-screen w-screen justify-center items-center 
+            bg-[#d8e4eb]'>
+            <div className='flex flex-col md:flex-row 
+                            h-[550px] w-[350px] md:h-[350px] md:w-[600px] 
                             p-5
-                            bg-[#f7fbfc] rounded-md drop-shadow-sm">
-                <div className="flex flex-col">
-                    <h1 className="text-[22px]">emma nishikawa</h1>
+                            bg-[#f7fbfc] rounded-md drop-shadow-sm'>
+                <div className='flex flex-col h-1/2 md:h-full w-full'>
+                    <h1 className='text-[22px]'>emma nishikawa</h1>
                     <p className="">second year / sixth</p>
                     <p className="">major: cognitive science - ml & nc</p>
                     <p className="">minor: computer science</p>
                 </div>
-                <div>
-                    <img src="" alt="profile photo"/>pic
+                <div className='flex h-full w-full justify-center items-center'>
+                    <img src='/pfp.jpeg'/>
                 </div>
             </div>
         </div>
