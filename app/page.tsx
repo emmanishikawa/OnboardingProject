@@ -11,14 +11,16 @@ export default function Home(){
                             h-[550px] w-[350px] md:h-[350px] md:w-[600px] 
                             p-5
                             bg-[#f7fbfc] rounded-md drop-shadow-sm'>
-                <div className='flex flex-col h-1/2 md:h-full w-full'>
-                    <h1 className='text-[22px]'>emma nishikawa</h1>
-                    <p className="">second year / sixth</p>
-                    <p className="">major: cognitive science - ml & nc</p>
-                    <p className="">minor: computer science</p>
+                <div className='flex flex-col h-1/2 md:h-full w-full
+                                text-[20px] text-blue-950'>
+                    <h1 className='text-[24px]'>emma nishikawa</h1>
+                    <p className=''>second year / sixth</p>
+                    <p className=''>major: cognitive science - ml & nc</p>
+                    <p className=''>minor: computer science</p>
+                    <p className=''>interests: listening to music, travelling, matcha 🍵</p>
                 </div>
                 <div className='flex h-full w-full justify-center items-center'>
-                    <img src='/pfp.jpeg'/>
+                    <img src='/pfp.jpeg' className='w-[280px] md:w-96'/>
                 </div>
             </div>
         </div>
