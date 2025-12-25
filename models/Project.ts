@@ -10,4 +10,6 @@ const projectSchema = new Schema({
   github_link: String
 });
 
-export default mongoose.model('Project', projectSchema);
+const Project = mongoose.models.Project || mongoose.model('Project', projectSchema);
+
+export default Project;
