@@ -9,5 +9,6 @@ const experienceSchema = new Schema({
   end_date: Date,
   description: String
 });
+const Experience = mongoose.models.Experience || mongoose.model('Experience', experienceSchema);
 
-export default mongoose.model('Experience', experienceSchema);
+export default Experience;
