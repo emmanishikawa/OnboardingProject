@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+console.log("mongodb file loaded");
 
 const MONGODB_URI = process.env.DATABASE_URL;
 
@@ -26,11 +27,12 @@ export async function connectToDatabase() {
     }
 
     if (!cached.promise) {
-        cached.promise = mongoose.connect(MONGODB_URI, {
+        cached.promise = mongoose.connect(MONGODB_URI as string, {
             bufferCommands: false,
         });
     }
 
     cached.conn = await cached.promise;
+    console.log("MongoDB connected");
     return cached.conn;
 }
