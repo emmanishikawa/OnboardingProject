@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
+import ExperienceComponent from './experience_component';
 
 type Experience = {
-        company: String,
-        title: String,
-        location: String,
+        _id: string,
+        company: string,
+        title: string,
+        location: string,
         start_date: Date,
         end_date?: Date,
-        description: String
+        description: string
     };
 
-export default function ExperienceComponent() {
+export default function ExperiencesComponent() {
 
     const [experiences, setExperiences] = useState<Experience[]>([]);
 
@@ -38,28 +40,12 @@ export default function ExperienceComponent() {
         fetchExperiences();
     }, []);
     
-    
     return (
-        <>
-            {experiences.map((experience, index) => (
-                <div key={index}>
-                    <p>
-                        {experience.company},&nbsp;
-                        {experience.location}
-                    </p>
-                    <p>{experience.title}</p>
-                    <p>
-                    {experience.start_date.toISOString().split('T', 1)}
-                    &nbsp;&mdash;&nbsp;
-                    {(experience.end_date != null) ? 
-                        (experience.end_date.toISOString().split('T', 1)) :
-                        "Present"}
-                    </p>
-                    <p>{experience.description}</p>
-                    
-                </div>
+        <div>
+            {experiences.map(experience => (
+                    <ExperienceComponent key={experience._id} experience={experience} />
             ))}
-        </>
+        </div>
     )
 
 }
