@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    font-family: 'GamjaFlowerFont';
+    font-family: 'PublicSans';
 }
 
 @layer base {
@@ -72,6 +72,6 @@ body {
 }
 
 @font-face {
-  font-family: 'GamjaFlowerFont';
-  src: url('./fonts/GamjaFlower-Regular.ttf') format('truetype')
+  font-family: 'PublicSans';
+  src: url('./fonts/PublicSans.ttf') format('truetype')
 }
