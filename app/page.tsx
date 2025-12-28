@@ -13,7 +13,7 @@ export default function Home(){
                     <h1 className='mb-3 text-[20px]'>emma nishikawa</h1>
                     <p>i am an undergraduate at ucsd majoring in cognitive science: machine learning
                          with a minor in computer science.</p>
-                    <p>my interests include listening to music, travelling, and matcha : &#41;</p>
+                    <p>my interests include listening to music, travelling, and <span className='text-[#5cad50]'>matcha</span> : &#41;</p>
                 </div>
             </div>
         </div>
