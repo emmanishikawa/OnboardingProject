@@ -1,28 +1,19 @@
 import React, { Component } from 'react';
-import profileImage from "./assets/pfp.jpeg";
 
 export default function Home(){
     return (
         <>
-        {/* background and content container */}
-        <div className='flex h-screen w-screen justify-center items-center 
-            bg-[#d8e4eb]'>
-            <div className='flex flex-col md:flex-row 
-                            h-[550px] w-[350px] md:h-[350px] md:w-[600px] 
-                            p-5
-                            bg-[#f7fbfc] rounded-md drop-shadow-sm'>
-                {/* inner container and texts*/}
-                <div className='flex flex-col h-1/2 md:h-full w-full
-                                text-[20px] text-blue-950'>
-                    <h1 className='text-[24px]'>emma nishikawa</h1>
-                    <p className=''>second year / sixth</p>
-                    <p className=''>major: cognitive science - ml & nc</p>
-                    <p className=''>minor: computer science</p>
-                    <p className=''>interests: listening to music, travelling, matcha 🍵</p>
+        <div className='flex flex-col h-full w-screen justify-center items-center mt-40'>
+            <div className='flex flex-col md:flex-row gap-8 h-full w-full md:w-[800px] p-5 md: md:rounded-md'>
+                <div className='flex items-start'>
+                    <img src='/pfp.jpeg' 
+                         className='w-52 aspect-square object-cover rounded-md'/>
                 </div>
-                {/* profile image */}
-                <div className='flex h-full w-full justify-center items-center'>
-                    <img src='/pfp.jpeg' className='w-[280px] md:w-96'/>
+                <div className='flex flex-col h-full grow text-[16px]'>
+                    <h1 className='mb-3 text-[20px]'>emma nishikawa</h1>
+                    <p>i am an undergraduate at ucsd majoring in cognitive science: machine learning
+                         with a minor in computer science.</p>
+                    <p>my interests include listening to music, travelling, and <span className='text-[#5cad50]'>matcha</span> : &#41;</p>
                 </div>
             </div>
         </div>
